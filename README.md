@@ -47,6 +47,8 @@
 <!-- Küçük resimler -->
 <img class="thumbnail" src="images/pc.png" alt="Resim 1">
 <img class="thumbnail" src="images/pc2.png" alt="Resim 2">
+<img class="thumbnail" src="images/pc3.png" alt="Resim 2">
+<img class="thumbnail" src="images/pc4.png" alt="Resim 2">
 
 <!-- Modal -->
 <div id="myModal" class="modal">
