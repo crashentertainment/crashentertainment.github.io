@@ -7,17 +7,25 @@
   </iframe>
 </div>
 
-<div style="text-align: center;">
 <style>
+  .image-container {
+    display: flex;
+    justify-content: center; /* Ortala */
+    flex-wrap: wrap;         /* Taşarsa alt satıra geç */
+    gap: 10px;               /* Resimler arası boşluk */
+    margin-top: 20px;
+  }
+
   .thumbnail {
     width: 150px;
     cursor: pointer;
-    margin: 5px;
     transition: 0.3s;
   }
+
   .thumbnail:hover {
     opacity: 0.8;
   }
+
   .modal {
     display: none;
     position: fixed;
@@ -28,12 +36,14 @@
     overflow: auto;
     background-color: rgba(0,0,0,0.8);
   }
+
   .modal-content {
     margin: auto;
     display: block;
     max-width: 90%;
     max-height: 80%;
   }
+
   .close {
     position: absolute;
     top: 30px;
@@ -45,11 +55,14 @@
   }
 </style>
 
-<!-- Küçük resimler -->
-<img class="thumbnail" src="images/pc.png" alt="Resim 1">
-<img class="thumbnail" src="images/pc2.png" alt="Resim 2">
-<img class="thumbnail" src="images/pc3.png" alt="Resim 2">
-<img class="thumbnail" src="images/pc4.png" alt="Resim 2">
+<!-- 📷 Resimlerin bulunduğu kapsayıcı -->
+<div class="image-container">
+ <img class="thumbnail" src="images/pc.png" alt="Resim 1">
+ <img class="thumbnail" src="images/pc2.png" alt="Resim 2">
+ <img class="thumbnail" src="images/pc3.png" alt="Resim 2">
+ <img class="thumbnail" src="images/pc4.png" alt="Resim 2">
+  <!-- İstersen daha fazla ekle -->
+</div>
 
 <!-- Modal -->
 <div id="myModal" class="modal">
@@ -62,7 +75,6 @@
   const modalImg = document.getElementById("imgBig");
   const closeBtn = document.getElementsByClassName("close")[0];
 
-  // Tüm thumbnail sınıfına sahip resimleri seç
   const thumbnails = document.querySelectorAll('.thumbnail');
 
   thumbnails.forEach(img => {
@@ -83,6 +95,6 @@
     }
   }
 </script>
-</div>
+
 
 
