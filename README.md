@@ -8,37 +8,31 @@
 </div>
 
 <style>
-  /* Küçük resim stili */
   .thumbnail {
-    width: 150px;  /* Küçük boyut */
+    width: 150px;
     cursor: pointer;
+    margin: 5px;
     transition: 0.3s;
   }
   .thumbnail:hover {
     opacity: 0.8;
   }
-
-  /* Modal arka planı */
   .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    padding-top: 60px; 
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
     left: 0; top: 0;
     width: 100%; height: 100%;
-    overflow: auto; 
+    overflow: auto;
     background-color: rgba(0,0,0,0.8);
   }
-
-  /* Modal içindeki büyük resim */
   .modal-content {
     margin: auto;
     display: block;
     max-width: 90%;
     max-height: 80%;
   }
-
-  /* Kapatma butonu */
   .close {
     position: absolute;
     top: 30px;
@@ -50,8 +44,9 @@
   }
 </style>
 
-<!-- Küçük resim -->
-<img id="myImg" class="thumbnail" src="images/pc.png" alt="Resim Açıklaması"> <img id="myImg" class="thumbnail" src="images/pc2.png" alt="Resim Açıklaması">
+<!-- Küçük resimler -->
+<img class="thumbnail" src="images/pc.png" alt="Resim 1">
+<img class="thumbnail" src="images/pc2.png" alt="Resim 2">
 
 <!-- Modal -->
 <div id="myModal" class="modal">
@@ -60,28 +55,30 @@
 </div>
 
 <script>
-  // Elemanları seç
   const modal = document.getElementById("myModal");
-  const img = document.getElementById("myImg");
   const modalImg = document.getElementById("imgBig");
   const closeBtn = document.getElementsByClassName("close")[0];
 
-  // Küçük resme tıklandığında modal açılır, büyük resim modalda gösterilir
-  img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  }
+  // Tüm thumbnail sınıfına sahip resimleri seç
+  const thumbnails = document.querySelectorAll('.thumbnail');
 
-  // Kapatma butonuna tıklayınca modal kapanır
+  thumbnails.forEach(img => {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+    }
+  });
+
   closeBtn.onclick = function() {
     modal.style.display = "none";
   }
 
-  // Modal dışına tıklayınca da kapatılabilir
   modal.onclick = function(event) {
     if(event.target === modal){
       modal.style.display = "none";
     }
   }
 </script>
+
 
