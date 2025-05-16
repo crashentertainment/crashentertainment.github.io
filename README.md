@@ -7,6 +7,7 @@
   </iframe>
 </div>
 
+<div style="text-align: center;">
 <style>
   .thumbnail {
     width: 150px;
@@ -82,5 +83,6 @@
     }
   }
 </script>
+</div>
 
 
