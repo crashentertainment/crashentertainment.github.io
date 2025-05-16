@@ -52,6 +52,7 @@
 
 <!-- Küçük resim -->
 <img id="myImg" class="thumbnail" src="images/pc.png" alt="Resim Açıklaması">
+<img id="myImg" class="thumbnail" src="images/pc2.png" alt="Resim Açıklaması">
 
 <!-- Modal -->
 <div id="myModal" class="modal">
