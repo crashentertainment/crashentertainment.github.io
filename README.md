@@ -1,4 +1,4 @@
-# [Kaptan Ege](https://crashentertainment.github.io/) [Privacy Policy](https://crashentertainment.github.io/privacypolicy)
+# [Kaptan Ege](https://crashentertainment.github.io/)                                                      [Privacy Policy](https://crashentertainment.github.io/privacypolicy)
 
 <div style="text-align: center;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/wUXnHaUFbms?si=tPriBBIb1_EoFNSA" 
